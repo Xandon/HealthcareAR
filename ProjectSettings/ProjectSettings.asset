@@ -183,7 +183,7 @@ PlayerSettings:
     serializedVersion: 2
     m_Bits: 238
   iPhoneSdkVersion: 988
-  iOSTargetOSVersionString: 11.1
+  iOSTargetOSVersionString: 11.0
   tvOSSdkVersion: 0
   tvOSRequireExtendedGameController: 0
   tvOSTargetOSVersionString: 9.0
@@ -763,9 +763,9 @@ PlayerSettings:
     Unity_Ads: 0
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: 48cac900-d9bf-44c1-a403-f479b207d83c
+  cloudProjectId: d32219fb-e034-4c7a-8c87-d8e0aa71f973
   projectName: HealthcareAR
-  organizationId: xandon-frogget
+  organizationId: hharoldshin
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
