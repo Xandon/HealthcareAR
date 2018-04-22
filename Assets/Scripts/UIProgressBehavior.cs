@@ -16,4 +16,10 @@ public class UIProgressBehavior : MonoBehaviour {
         // Show Instructions Panel
         instructionsPanel.SetActive(true);
     }
+
+    public void LoadMainUI()
+    {
+        // Hide Instructions Panel
+        instructionsPanel.SetActive(false);
+    }
 }
