@@ -56,7 +56,7 @@ namespace UnityEngine.XR.iOS
 						m_HitTransform.rotation = hit.transform.rotation;
 					}
 				}
-				initialLocation = new Vector3()
+				initialLocation = new Vector3();
 				#else
 			if (Input.touchCount > 0 && m_HitTransform != null)
 			{
@@ -90,8 +90,6 @@ namespace UnityEngine.XR.iOS
 				#endif
 			}
 		}
-
-	
 	}
 }
 
