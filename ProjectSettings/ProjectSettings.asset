@@ -719,9 +719,9 @@ PlayerSettings:
     Unity_Ads: 0
   facebookSdkVersion: 7.9.1
   apiCompatibilityLevel: 2
-  cloudProjectId: 1c98152a-5e68-4f95-b6e1-626323f8657a
-  projectName: test7 (1)
-  organizationId: xandon-frogget
+  cloudProjectId: c89cc1a0-d75b-4c32-8258-48df0078ba57
+  projectName: test7 (2)
+  organizationId: markpavlovski
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
