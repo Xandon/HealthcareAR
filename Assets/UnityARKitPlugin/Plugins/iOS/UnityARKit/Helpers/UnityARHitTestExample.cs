@@ -26,9 +26,7 @@ namespace UnityEngine.XR.iOS
 
 		// Update is called once per frame
 		void Update () {
-			Debug.Log (Input.mousePosition);
-			Debug.Log(Camera.main.pixelWidth);
-			if (Input.mousePosition.x < Camera.main.pixelWidth * 0.5f) {
+			if (Input.mousePosition.x < Camera.main.pixelWidth * 0.7f) {
 				#if UNITY_EDITOR   //we will only use this script on the editor side, though there is nothing that would prevent it from working on device
 				if (Input.GetMouseButtonDown (0)) {
 					Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
