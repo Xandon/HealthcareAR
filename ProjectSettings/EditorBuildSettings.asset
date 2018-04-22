@@ -6,5 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/NetworkTest.unity
-    guid: ec565f57390a44d56afec5090df495c2
+    path: Assets/Scenes/Workups/Intro_AR.unity
+    guid: b640d31bb6b5c438ea3855e0010ff3ba
+  - enabled: 1
+    path: Assets/Scenes/Workups/HealthcareAR.unity
+    guid: 0c398f12f5d5c43cd842de40f0f3ca7e
