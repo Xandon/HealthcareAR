@@ -44,6 +44,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/AR2151.unity
     guid: b25c55ccc7f3a4ebf8550a96339000e5
-  - enabled: 1
+  - enabled: 0
     path: Assets/AR2219.unity
     guid: 3795ba1d62cd74baeac20893167a92bd
+  - enabled: 1
+    path: Assets/AR2234.unity
+    guid: da28895d018c94730a94e14889938291

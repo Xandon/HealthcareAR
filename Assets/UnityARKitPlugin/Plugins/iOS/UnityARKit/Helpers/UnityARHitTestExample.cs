@@ -8,6 +8,8 @@ namespace UnityEngine.XR.iOS
 		public Transform m_HitTransform;
 		public float maxRayDistance = 30.0f;
 		public LayerMask collisionLayer = 1 << 10;  //ARKitPlane layer
+		public Vector3 hitLocation = new Vector3(0.0,0.6,0.0);
+
 
         bool HitTestWithResultType (ARPoint point, ARHitTestResultType resultTypes)
         {
