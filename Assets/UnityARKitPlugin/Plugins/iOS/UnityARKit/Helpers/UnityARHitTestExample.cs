@@ -10,7 +10,6 @@ namespace UnityEngine.XR.iOS
 		public LayerMask collisionLayer = 1 << 10;  //ARKitPlane layer
 		Vector3 initialLocation = new Vector3();
 		Vector3 newLocation = new Vector3();
-		Vector3 hitLocation = new Vector3();
 		Vector3 hitTranslation = new Vector3();
 
 
@@ -49,7 +48,7 @@ namespace UnityEngine.XR.iOS
 				}
 				hitTranslation = newLocation - initialLocation;
 				initialLocation = newLocation;
-				m_HitTransform.transform.Translate = hitTranslation;
+				m_HitTransform.Translate(hitTranslation);
 				Debug.Log (string.Format ("x:{0:0.######} y:{1:0.######} z:{2:0.######}", m_HitTransform.position.x, m_HitTransform.position.y, m_HitTransform.position.z));
 
 						//and the rotation from the transform of the plane collider
