@@ -237,8 +237,8 @@ namespace TanksMP
         /// </summary>
 		public void OnEveryplaySupport(bool supported)
 		{
-			everyplayButton.gameObject.SetActive(supported);
-			recordToggle.gameObject.SetActive(supported);
+			//everyplayButton.gameObject.SetActive(supported);
+			//recordToggle.gameObject.SetActive(supported);
 		}
 			
 			
