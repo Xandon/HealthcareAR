@@ -20,7 +20,16 @@ namespace UnityEngine.XR.iOS
             if (hitResults.Count > 0) {
                 foreach (var hitResult in hitResults) {
                     Debug.Log ("Got hit!");
-                    m_HitTransform.position = UnityARMatrixOps.GetPosition (hitResult.worldTransform);
+
+					newLocation = UnityARMatrixOps.GetPosition (hitResult.worldTransform);
+					if (initialLocation.magnitude == 0) { 
+						initialLocation = newLocation;
+					}
+					hitTranslation = newLocation - initialLocation;
+					initialLocation = newLocation;
+					m_HitTransform.Translate(hitTranslation);
+
+//                    m_HitTransform.position = UnityARMatrixOps.GetPosition (hitResult.worldTransform);
                     m_HitTransform.rotation = UnityARMatrixOps.GetRotation (hitResult.worldTransform);
                     Debug.Log (string.Format ("x:{0:0.######} y:{1:0.######} z:{2:0.######}", m_HitTransform.position.x, m_HitTransform.position.y, m_HitTransform.position.z));
                     return true;
@@ -28,6 +37,9 @@ namespace UnityEngine.XR.iOS
             }
             return false;
         }
+		void Start () {
+
+		}
 
 		// Update is called once per frame
 		void Update () {
@@ -57,8 +69,7 @@ namespace UnityEngine.XR.iOS
 				}
 				initialLocation = new Vector3();
 				#else
-			if (Input.touchCount > 0 && m_HitTransform != null)
-			{
+				if (Input.touchCount > 0 && m_HitTransform != null){
 				var touch = Input.GetTouch(0);
 				if (touch.phase == TouchPhase.Began || touch.phase == TouchPhase.Moved)
 				{
@@ -86,6 +97,8 @@ namespace UnityEngine.XR.iOS
                     }
 				}
 			}
+			initialLocation = new Vector3();
+
 				#endif
 			}
 		}
