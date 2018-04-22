@@ -12,9 +12,9 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: cAReconnect
-  defaultCursor: {fileID: 2800000, guid: 8d01914cfccdd9241af2974475637197, type: 3}
-  cursorHotspot: {x: 16, y: 16}
+  productName: test7
+  defaultCursor: {fileID: 0}
+  cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
   m_ShowUnitySplashScreen: 1
   m_ShowUnitySplashLogo: 1
@@ -710,7 +710,7 @@ PlayerSettings:
   cloudServicesEnabled:
     Analytics: 0
     Build: 0
-    Collab: 1
+    Collab: 0
     ErrorHub: 0
     Game_Performance: 0
     Hub: 0
@@ -719,9 +719,9 @@ PlayerSettings:
     Unity_Ads: 0
   facebookSdkVersion: 7.9.1
   apiCompatibilityLevel: 2
-  cloudProjectId: 48cac900-d9bf-44c1-a403-f479b207d83c
+  cloudProjectId: 982c2f3a-7129-4cb5-91c0-f30d725b6f80
   projectName: HealthcareAR
-  organizationId: xandon-frogget
+  organizationId: dustin-616110
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
