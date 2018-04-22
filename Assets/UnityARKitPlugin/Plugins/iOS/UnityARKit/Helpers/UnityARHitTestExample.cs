@@ -8,7 +8,11 @@ namespace UnityEngine.XR.iOS
 		public Transform m_HitTransform;
 		public float maxRayDistance = 30.0f;
 		public LayerMask collisionLayer = 1 << 10;  //ARKitPlane layer
-		public Vector3 hitLocation = new Vector3(0.0,0.6,0.0);
+		Vector3 initialLocation = new Vector3();
+		Vector3 newLocation = new Vector3();
+		Vector3 hitLocation = new Vector3();
+		Vector3 hitTranslation = new Vector3();
+
 
 
         bool HitTestWithResultType (ARPoint point, ARHitTestResultType resultTypes)
@@ -28,7 +32,7 @@ namespace UnityEngine.XR.iOS
 
 		// Update is called once per frame
 		void Update () {
-			if (Input.mousePosition.x < Camera.main.pixelWidth * 0.7f) {
+			if (Input.mousePosition.x < Camera.main.pixelWidth * 0.75f) {
 				#if UNITY_EDITOR   //we will only use this script on the editor side, though there is nothing that would prevent it from working on device
 				if (Input.GetMouseButtonDown (0)) {
 					Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
@@ -38,13 +42,21 @@ namespace UnityEngine.XR.iOS
 					//effectively similar to calling HitTest with ARHitTestResultType.ARHitTestResultTypeExistingPlaneUsingExtent
 					if (Physics.Raycast (ray, out hit, maxRayDistance, collisionLayer)) {
 						//we're going to get the position from the contact point
-						m_HitTransform.position = hit.point;
-						Debug.Log (string.Format ("x:{0:0.######} y:{1:0.######} z:{2:0.######}", m_HitTransform.position.x, m_HitTransform.position.y, m_HitTransform.position.z));
+		//				m_HitTransform.position = hit.point;
+				newLocation = hit.point;
+				if (initialLocation.magnitude == 0) { 
+					initialLocation = newLocation;
+				}
+				hitTranslation = newLocation - initialLocation;
+				initialLocation = newLocation;
+				m_HitTransform.transform.Translate = hitTranslation;
+				Debug.Log (string.Format ("x:{0:0.######} y:{1:0.######} z:{2:0.######}", m_HitTransform.position.x, m_HitTransform.position.y, m_HitTransform.position.z));
 
 						//and the rotation from the transform of the plane collider
 						m_HitTransform.rotation = hit.transform.rotation;
 					}
 				}
+				initialLocation = new Vector3()
 				#else
 			if (Input.touchCount > 0 && m_HitTransform != null)
 			{
