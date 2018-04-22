@@ -719,9 +719,9 @@ PlayerSettings:
     Unity_Ads: 0
   facebookSdkVersion: 7.9.1
   apiCompatibilityLevel: 2
-  cloudProjectId: 48cac900-d9bf-44c1-a403-f479b207d83c
+  cloudProjectId: 982c2f3a-7129-4cb5-91c0-f30d725b6f80
   projectName: HealthcareAR
-  organizationId: xandon-frogget
+  organizationId: dustin-616110
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
