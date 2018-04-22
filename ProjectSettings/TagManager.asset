@@ -13,9 +13,9 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - ARKitPlane
+  - Player
+  - HUD
+  - Bullet
   - 
   - 
   - 

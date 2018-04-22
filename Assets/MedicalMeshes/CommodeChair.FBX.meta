@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 7cef8392ef533e646a5c818afb721774
-timeCreated: 1524349203
+guid: b730ddec12d1e90498aedc817d4054fe
+timeCreated: 1524353386
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -19,7 +19,12 @@ ModelImporter:
     400008: ID16
     400010: ID30
     400012: M4801_-_Commode_Chair
-    2100000: material
+    2100000: Material_1
+    2100002: Material_2
+    2100004: Material_3
+    2100006: Material_4
+    2100008: Material_5
+    2100010: Material_6
     2300000: FamilyGeomCombination_3205
     2300002: FamilyGeomCombination_3206
     2300004: FamilyGeomCombination_3207
@@ -38,8 +43,6 @@ ModelImporter:
     4300006: FamilyGeomCombination_3205
     4300008: ID16
     4300010: M4801_-_Commode_Chair
-    7400000: Take 001
-    9500000: //RootNode
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -114,7 +117,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
